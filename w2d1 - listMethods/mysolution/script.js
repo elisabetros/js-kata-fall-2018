@@ -1,28 +1,38 @@
 "use strict";
-window.addEventListener("DOMContentLoaded", listMethods);
 
 function displayElement(element) {
   console.log(element.textContent);
   //   element.style.display = "none";
 }
 
-function listMethods() {
-  const modify = document.querySelector("#modify").querySelectorAll("ul > li");
-  console.log(modify);
-  modify.forEach(displayElement);
-  const info = document.querySelector("#info").querySelectorAll("ul > li");
-  console.log(info);
-  info.forEach(displayElement);
-  const newarray = document
-    .querySelector("#newarray")
-    .querySelectorAll("ul > li");
-  console.log(newarray);
-  newarray.forEach(displayElement);
-}
+function listMethods(id) {
+  //   console.log(id);
+  let section = document.getElementById(id);
+  const elements = section.querySelectorAll("ul > li");
+  console.log(elements);
+  //   elements.forEach(element => {
+  //     displayElement(element);
 
-// listMethods("modify");
-// listMethods("info");
-// listMethods("newarray");
+  //   });
+  for (let i = 0; i < elements.length; i++) {
+    const element = elements[i];
+    displayElement(element);
+  }
+}
+//   console.log(modify);
+//   modify.forEach(displayElement);
+//   const info = document.querySelector("#info").querySelectorAll("ul > li");
+//   console.log(info);
+//   info.forEach(displayElement);
+//   const newarray = document
+//     .querySelector("#newarray")
+//     .querySelectorAll("ul > li");
+//   console.log(newarray);
+//   newarray.forEach(displayElement);
+
+listMethods("modify");
+listMethods("info");
+listMethods("newarray");
 
 // TODO: Create listMethods function
 
