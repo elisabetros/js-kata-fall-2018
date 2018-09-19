@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50vw;
+            height: 50vh;
+            margin: auto;
+            transition: background-color .3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+    </div>
+
+    <script>
+        const div = document.querySelector("div");
+        let lastColor;
+
+        setInterval(changeColors, 2000)
+
+        function changeColors() {
+            let newColor = "rgb(" + Math.floor(Math.random() * 250) + "," + Math.floor(Math.random() * 250) + "," + Math.floor(Math.random() * 250) + ")";
+            console.log(lastColor);
+            if (lastColor === newColor) {
+                changeColors();
+                return;
+            }
+            lastColor = newColor
+            div.style.backgroundColor = newColor;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
