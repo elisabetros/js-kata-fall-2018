@@ -1,8 +1,10 @@
+"use strict";
 const plusBtn = document.querySelector("#plus");
 let firstCounter = 1;
 let secondCounter = 1;
 let firstSpan = document.querySelector("span:first-child");
 let secondSpan = document.querySelector("span:last-child");
+
 function counting() {
   plusBtn.addEventListener("click", function() {
     //   console.log(counter);
@@ -21,7 +23,7 @@ function counting() {
       if (firstSpan.innerHTML >= 99) {
         firstSpan.innerHTML = "0" + secondCounter++;
       } else if (firstSpan.innerHTML >= 999) {
-        irstSpan.innerHTML = secondCounter++;
+        firstSpan.innerHTML = secondCounter++;
       }
       // secondSpan.innerHTML = "00" + firstcounter++;
     }
