@@ -5,9 +5,9 @@ let secondCounter = 0;
 let firstSpan = document.querySelector("span:first-child");
 let secondSpan = document.querySelector("span:last-child");
 
-// setInterval(function() {
-function counting() {}
-plusBtn.addEventListener("click", function() {
+setInterval(function() {
+  // function counting() {}
+  // plusBtn.addEventListener("click", function() {
   secondSpan.innerHTML = firstCounter++;
   //   console.log(counter);
   if (firstCounter <= 9) {
@@ -30,9 +30,11 @@ plusBtn.addEventListener("click", function() {
     firstSpan.innerHTML = "0" + secondCounter;
   } else if (secondCounter <= 999) {
     firstSpan.innerHTML = secondCounter;
+  } else if (secondCounter >= 999) {
+    secondCounter = 0;
   }
   // secondSpan.innerHTML = "00" + firstcounter++;
-});
-// }, 1);
+  // });
+}, 1);
 
 // counting();
