@@ -1,0 +1,10 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 5vw 30vw;
+}
+div {
+  background-color: brown;
+  /* height: 10px; */
+  width: 5vw;
+}
